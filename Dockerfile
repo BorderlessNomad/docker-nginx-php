@@ -35,6 +35,8 @@ RUN mv composer.phar /usr/bin/composer
 ADD sources/nginx-start /usr/local/bin/
 RUN chmod +x /usr/local/bin/nginx-start
 
+ADD sources/info.php /var/www/
+
 EXPOSE 80
 
 CMD nginx-start
