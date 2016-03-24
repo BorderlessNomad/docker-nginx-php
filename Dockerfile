@@ -32,10 +32,9 @@ RUN ln -s /etc/nginx/sites-available/site /etc/nginx/sites-enabled/site
 RUN curl -sS https://getcomposer.org/installer | php 
 RUN mv composer.phar /usr/bin/composer
 
-# Start PHP 7 Daemon
-RUN service php7.0-fpm start
-
-# Restart Nginx
-RUN service nginx restart
+ADD sources/nginx-start /usr/local/bin/
+RUN chmod +x /usr/local/bin/nginx-start
 
 EXPOSE 80
+
+CMD nginx-start
