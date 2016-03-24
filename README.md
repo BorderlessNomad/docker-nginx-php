@@ -1,10 +1,7 @@
-Docker Nginx PHP
-=================
+# Docker PHP 7 on running using Nginx
 
-* Ubuntu 14.04
-* PHP 5.6
-* Nginx Mainline
-* MySQL 5.6
+* Nginx stable
+* PHP 7
 
 ## Base for these containers:
-* [corbinu/docker-phpmyadmin](https://github.com/corbinu/docker-phpmyadmin)
+* [ahirmayur/phpmyadmin](https://github.com/ahirmayur/docker-phpmyadmin)
