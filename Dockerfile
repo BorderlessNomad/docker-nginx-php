@@ -28,13 +28,14 @@ ADD sources/site /etc/nginx/sites-available/
 
 RUN ln -s /etc/nginx/sites-available/site /etc/nginx/sites-enabled/site
 
-RUN service nginx restart
-
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php 
 RUN mv composer.phar /usr/bin/composer
 
+# Start PHP 7 Daemon
 RUN service php7.0-fpm start
+
+# Restart Nginx
 RUN service nginx restart
 
 EXPOSE 80
