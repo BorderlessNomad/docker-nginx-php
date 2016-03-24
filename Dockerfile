@@ -38,5 +38,6 @@ RUN chmod +x /usr/local/bin/nginx-start
 ADD sources/info.php /var/www/
 
 EXPOSE 80
+EXPOSE 22
 
 CMD nginx-start
