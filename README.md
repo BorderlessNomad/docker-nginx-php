@@ -1,4 +1,4 @@
-# Docker PHP 7 on running using Nginx
+# Docker PHP 7 on latest NGINX
 
 * NGINX stable
 * PHP 7
