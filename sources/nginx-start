@@ -1,9 +1,0 @@
-#!/bin/sh
-
-service php7.0-fpm start
-
-service nginx restart
-
-while(true) do
-  sleep 60
-done

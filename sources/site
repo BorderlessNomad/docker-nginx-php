@@ -1,5 +1,5 @@
 server {
-    listen 80;
+    listen 80 default_server;
 
     root /var/www;
     index index.php index.html index.htm;
@@ -19,6 +19,7 @@ server {
     }
 
     location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
         try_files $uri =404;
         fastcgi_pass 127.0.0.1:9000;
         fastcgi_index index.php;
